@@ -1,0 +1,1 @@
+Técnicas de amostragem em que a seleção é aleatória de tal forma que cada elemento tem igual probabilidade de ser sorteado para a amostra, e é selecionado independentemente de qualquer outro

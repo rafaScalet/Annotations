@@ -1,0 +1,2 @@
+- [[Estatísticas-Inferencial]] 
+- [[Estatística-Descritiva]] 

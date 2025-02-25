@@ -8,7 +8,7 @@
 
 ### Benefícios entre Colaboração e Automação
 
-- [Entrega Contínua](DevOps/Integração%20Contínua.md)
+- [Entrega Contínua](Integração-Contínua.md)
 - Qualidade Aprimorada
 - Eficiência Operacional
 - Inovação Acelerada

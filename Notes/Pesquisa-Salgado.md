@@ -1,0 +1,79 @@
+## 1 - Importância do DevOps
+
+- **Qual é o impacto do DevOps no ciclo de desenvolvimento de software?**
+Por promover uma maior colaboração entre os times de desenvolvimento de de operação, faz com que as entregas ao cliente aconteçam de forma mais rápida e com maior qualidade, e isso ocorre por conta das mudanças no ciclo de desenvolvimento, pois agora, são adicionadas etapas de testes automatizadas e entrega contínua, para deixar tudo automatizado diminuindo a chance de erro humano.
+
+- **Como a automação e a colaboração impactam a produtividade das equipes de desenvolvimento?**
+O ambiente de desenvolvimento que um time DevOps tem, é muito diferente de um ambiente em que os times de Dev e Ops são separados, num ambiente DevOps, já existe diversas ferramentas para aumentar sua produtividade auxiliando o Dev a escrever menos bugs, um exemplo são os testes automatizados, se seu código não passar em um dos testes já escritos logo no começo do desenvolvimento de uma nova feature, será polpado muito tempo, pois não será necessário uma refatoração depois que for descoberto que havia um bug no código. ferramentas como gerenciadores de versão (nvm para node, pyenv para python), sistemas de versionamento (git, mercurial SVN), ou softwares como docker, que "cria uma receita de bolo" para o código funcionar bem, aumentam e muito a produtividade do Dev, fazendo com que o Dev só precise se preocupar em "codar".
+Por conta da integração entre os dois times, a produtividade de ambos tende a subir, uma vez que, quando seu ambiente está "setado" não será mais necessário mexer, além de poder ser aproveitado em projetos futuros.
+
+- **Apresente um exemplo de uma empresa que implementou DevOps e obteve benefícios:**
+A Amazon é o melhor exemplo quando se trata de DevOps, a empresa sofria muito com seus softwares tendo atrasos para serem entregados simplesmente por conta de processos de build demorados e manuais, ao adotar práticas DevOps, como CI/CD, suas entregas de software ficaram extremamente mais rápidas, se tornando inclusive referência no mercado quando se trata de DevOps. Também integrou o DevOps aos serviços da AWS, como o AWS CodeDeploy, um serviço de CD oferecido pela AWS para seus usuários.
+
+## 2 - Automatização no DevOps
+
+- **Quais são os principais processos de desenvolvimento de software que podem ser automatizados DevOps**
+Um dos principais motivos do DevOps existir, é a automatização, agilizar os processos de build, test e deploy, que podem ser feitos por simples scripts sempre foi uma das tarefas que o devops buscou resolver. Os processos de build, principalmente em projetos muito grandes que utilizam de uma linguagem compilada, pode ser extremamente demorado e maçante de ser feito manualmente, automatiza-los com os famosos build tools ou task runners são a forma mais inteligente de se lidar com estes processos, em projetos muito grandes, com uma estrutura de arquivos complexa, libs de terceiro incorporadas e etc, é essencial ter um build tool, para lidar com estas configurações de forma automatizada, existem diversos build tools para diversas linguagens, para java, os mais famosos são o maven e o gradle, para c/c++ temos o famoso GNU Make e CMake (usados inclusive como forma de distribuição de softwares em certas distribuições linux) e entre outros para diversas outras linguagens. Os build tools são muito usadas em linguagens que necessitem ser compiladas, em linguagens interpretadas, temos os task runners, responsáveis por executar (como o próprio nome já diz) tarefas antes do projeto ser executado, no ecossistema javascript temos o grunt e o gulp como principais representantes destes tipos de software. Além de builds e tasks, tests também podem ser automatizados, ao usar libs como o Jest ou o Vitest (ecossistema javascript), além do deploy, que pode ser feito através da Vercel, um sistema que simplifica muito o deploy de aplicações javascript.
+
+- **Quais desafios as empresas enfrentam ao implementar pipelines de automatização**
+Um dos maiores problemas nos pipelines de automatização, é quando os próprios testes escritos para evitar os problemas, começam a dar problema, seja por uma mudança no ambiente de desenvolvimento ou até mesmo na versão de uma ferramenta que está sendo usada, quando isso ocorre, normalmente é necessário a intervenção humana para resolver. Outro problema, pode ser a complexidade, principalmente ferramentas mais antigas, podem ter uma curva de aprendizado muito grande, tornando difícil dar a devida manutenção a estas pipelines de automação, algumas vezes a preocupação em automatizar é tanta, que acaba sendo automatizado o que não é necessário, fazendo com que a automação fique mais complexa e com maior chances de dar erro.
+
+- **Cite uma ferramenta popular utilizada para automação no DevOps e descreva seu funcionamento**
+Uma das ferramentas mais populares quando se trata de estratégias atuais de DevOps, é o GitHub Actions, uma ferramenta que consegue realizar pipelines de automação diretamente dentro do repositório do GitHub, ele é configurado através de um simples arquivo yaml, e pode realizar diversos tipos de automação, desde testes até a deploys completos, um de seus principais usos é a geração de novas releases para serem baixadas pelos usuários, pois pode ser integrado com o sistema de distribuição de software do github, assim tornando mais fácil a distribuição do software
+
+## 3 - Integração Contínua
+
+- **Qual é o conceito de integração contínua e como ele se diferencia de outra práticas DevOps**
+a integração contínua (Continuos Integration ou CI), é uma prática muito comum do DevOps, que visa, assim como o próprio nome já diz, integrar de forma contínua a base de código, é um dos pilares mais importantes do DevOps, e muitas vezes é usado sem nem que os devs saibam, em minha pesquisa, o que mais diferencia ela de outras práticas devops, é ser tão usada por todos sem saber que é uma prática de devops, muitos devs usam seu github/gitlab, sem saber que estão efetuando práticas de DevOps.
+
+- **Quais são as vantagens de adotar CI no desenvolvimento de software**
+A adoção de CI pode trazer diversos benefícios extremamente perceptíveis ao desenvolvimento de software, como a agilidade em integrar novas features, de acordo com Kim et al, o CI melhora o desenvolvimento de softwares em três principais aspectos: redução de erro, com pequenas mudanças sendo feitas regularmente no código, é muito mais difícil ter algum erro de integração, feedback rápido, normalmente, um dev pode ver quase que em tempo real o código de outro sendo integrado a base principal, possibilitando trabalhar de forma muito mais rápida e eficaz, melhora na qualidade de software, usando as ferramentas corretas de CI, é possível ter analises, métricas e logs de todo o pipeline de CI que foi gerado.
+
+- **Apresente um caso real de uma empresa que teve melhorias significativas com a adoção da Integração Contínua**
+Acredito que um dos principais casos seria o da Amazon, que basicamente virou um símbolo sobre este assunto, antes de adotar as práticas devops, a implementação de novas funcionalidades e serviços levavam muito tempo por conta do processo extremamente manual, ao adotar pipelines de automação para seus serviços, teve um aumento na quantidade de deploys diários estrondoso, isso foi levado também, ao setor de governança de TI da Amazon, fazendo com que basicamente todos os tipos de processos da empresa se tornassem pipelines automatizados, e para uma empresa de tecnologia que oferece soluções para a área de tecnologia, isso foi incrível, assim, fazendo com que a Amazon se tornasse referência ao falar de DevOps, atualmente não se sabe o quão automático são os processos da Amazon por conta destes dados serem privados, mas acreditasse que tenham poucos processos manuais.
+
+## 4 - Ferramentas de CI/CD
+
+- **Quais são as principais ferramentas utilizadas para CI/CD e quais são suas principais diferenças**
+Minha pesquisa mostrou dados conflitantes, fontes diversas com informações muito diversas, mas certos nomes apareceram em todas elas, são eles: github/gitlab/bitbucket, servidores usados para armazenar repositórios git, com diversas funções, como executar automaticamente um script assim que um novo commit chega, gerar releases automáticas com base nas especificações do projeto entre outrs. o Jenkins, uma das ferramentas de CI mais famosas, é uma espécie de "servidor", que com a quantidade de plugins feitos pelo pessoal do jenkins e pela comunidade, pode ter a funcionalidade que quiser, tem integração com o git, docker, kubernetes e etc, além de ser extremamente fácil de gerenciar tudo, pois possui uma interface web que será usada para gerenciar tudo referente ao jenkins, como builds, tests e deploys.
+
+- **Escolha uma ferramenta de CI/CD de sua preferência(por exemplo, Jenkins, GitHub Actions, GitLab CI/CD, Travis CI) e explique seu funcionamento básico.**
+O GitHub Actions é uma ferramenta bem simples incorporada ao GitHub, ela permite executar pipelines relativamente complexas dado alguma alteração feita no repositório git, seu funcionamento é muito simples, usará as informações fornecidas pelo git, como commits, push, merge e etc, para executar ou não uma tarefa, como builds, tests e linters, ele usa um arquivo de configuração muito simples, escrito usando a extensão yml, neste arquivo ficará toda a configuração de uma determinada pipeline, como suas tasks, onde deve rodar e com o que deve rodar, normalmente subirá uma máquina linux para rodar todas as tasks, mas pode ser usado com windows e macOS, porém, estes dois sendo pagos, enquanto com linux é gratuito e podendo ser rodado durante 2.000 minutos em contas free do GitHub e até 50.000 minutos em contas Enterprise
+
+## 5 - Impacto do DevOps e CI no mercado de trabalho
+
+- **Como o DevOps e a Integração Contínua estão impactando a demanda por profissionais na área de tecnologia?**
+O DevOps trouxe mudanças significativas ao mercado, em um mundo em que cada vez mais a tecnologia está impregnada em nossas vidas, a demanda pela mesma também aumentará, ou seja, um profissional que é capaz de reduzir o tempo de entrega de um produto ao cliente, é muito mais valioso que outros profissionais, o conhecimento, mesmo que mínimo em certas práticas de DevOps, se tornou indispensável nos dias de hoje, e cada vez mais está se cobrando mais de profissionais de tecnologia terem conhecimentos de fora de suas áreas, como administração e finanças, ou então conhecer a parte de domínio da empresa.
+
+- **Quais habilidades são essenciais para um profissional que deseja trabalhar com DevOps?**
+As principais habilidades para se trabalhar com DevOps não poderiam ser mais claras, é um prática que mistura dois times extremamente técnicos, ou seja, um conhecimento técnico abrangente e profundo é basicamente uma necessidade ao se trabalhar com DevOps, temos também a colaboração, uma outra habilidade muito importante, pois o DevOps visa facilitar a vida de todos os envolvidos no projeto, então ser um cara colaborativo e comunicador também é outra necessidade, uma habilidade que vem muito a calhar, é um pouco de conhecimento em governança a na área administrativa da empresa, pois isso facilita a entender melhor os processos e assim criar melhores pipelines de automação
+
+## Resumo
+
+- **DevOps** -> o conceito de DevOps é relativamente simples, é um conceito que une dois times que fazer partes do desenvolvimento, o próprio time de desenvolvimento e o de operação, uma breve explicação sobre estes dois times:
+	- **Desenvolvimento (Development/Dev)** -> É o time que realmente cuida da codificação da solução que está sendo desenvolvida, normalmente tinha bastante conhecimento técnico nas ferramentas usadas para o desenvolvimento, como os compiladores/runtimes, as libs usadas pelo sistema, e os RF, RNF e regras de negócio.
+	- **Operações (Operations/Ops)** -> Era o time responsável pela entrega do produto feito pelo pessoal de Dev, normalmente se tinha mais conhecimento em Infra, e ferramentas de gestão e versionamento, além de ferramentas de análise e acompanhamento do cliente.
+	Estes dois times foram unidos para formar o DevOps, um único time que fica responsável por estas duas áreas do desenvolvimento, e com isso, diversas ferramentas foram criadas para facilitar a implementação desta estratégia, como GitHub Actions, Jenkins, Ansible e até mesmo o docker e o git podem ser considerados ferramentas de DevOps
+
+- **CI/CD** -> Dois conceitos distintos mas que sempre são vistos juntos, Continuos Integration (Integração contínua) é uma estratégia de desenvolvimento que visa a colaboração com outras pessoas, resumindo muito, é quando dois ou mais devs integram seus códigos a "ramificação principal" do projeto sempre que possível, passando novamente nos testes, gerando um novo build, mesmo que seja uma mudança minima. Podemos dizer que o Continuos Deployment, é uma extensão do CI, onde é usada esta estratégia de integração com o código, porém com o cliente, evitando algo que era muito recorrente antigamente, o famoso "Deploy na Sexta", pois era muito comum fazer uma grande entrega em um dia específico, assim causando dor de cabeça tanto para o dev, quanto para o cliente, a dor de cabeça era causada, pois caso o cliente não gostasse de uma feature que foi adicionada lá no inicio, mesmo usando um sistema de versionamento como o git, seria difícil alterar ou até mesmo remover, enquanto que com o CD, o deploy é feito de forma automática, assim que for integrado uma nova feature no projeto, então caso o cliente não goste, ou tenha queira fazer alguma alteração, será muito mais simples, pois é algo recente que ainda pode ser feito um rollback sem perder outras features.
+
+- **Automatização** -> Um nome bem auto explicativo para um conceito relativamente fácil, trata-se somente da parte que cuida de automações, como pipelines automáticas e testes automáticos, é um conceito bem simples, e muito usado em DevOps
+
+## Bibliografia
+
+- [Atlasian CD](https://www.atlassian.com/br/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+- [Atlasian DevOps](https://www.atlassian.com/br/devops)
+- [Awari](https://awari.com.br/devops-skills-habilidades-e-competencias/)
+- [AWS CI](https://aws.amazon.com/pt/devops/continuous-integration/)
+- [AWS DevOps](https://aws.amazon.com/pt/devops/what-is-devops/)
+- [Claranet](https://www.claranet.com/br/blog/devops-o-que-e-tudo-sobre-devops-como-implementar)
+- [Gaea](https://gaea.com.br/ciclo-devops/)
+- [GitHub Actions](https://docs.github.com/pt/actions)
+- [Jenkins](https://www.jenkins.io/doc/)
+- [Medium Automatizadores](https://medium.com/pensamentos-js/um-olhar-alternativo-sobre-automadores-339d0df6a4cc)
+- [Medium Build Tools](https://medium.com/@alex.felipe/entenda-o-que-s%C3%A3o-build-tools-do-mundo-java-682a26e38ff2)
+- [O2B](https://o2b.com.br/ci-cd/)
+- [Sitech](https://www.sitech.me/blog/what-not-to-automate-with-a-ci-cd-pipeline)
+- [Visure](https://visuresolutions.com/pt/blog/top-cicd-tools/)
+- [Wikipedia DevOps e Governança](https://pt.wikipedia.org/wiki/Governan%C3%A7a_de_TI_para_Opera%C3%A7%C3%B5es_de_DevOps)
+- Materiais das aulas do professor Sérgio Salgado

@@ -1,0 +1,1 @@
+A amostra desproporcional é utilizada quando há grupos e subgrupos que geram resultados com pesos dessemelhantes em uma pesquisa.
