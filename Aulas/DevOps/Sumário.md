@@ -1,2 +1,0 @@
-- [Introdução-DevOps](Introdução-DevOps.md) 
-- [Integração-Contínua](Integração-Contínua.md) 

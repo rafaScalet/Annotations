@@ -8,7 +8,7 @@
 
 ### Benefícios entre Colaboração e Automação
 
-- [Entrega Contínua](Integração-Contínua.md)
+- [Entrega Contínua](<Integracao-Continua.md>)
 - Qualidade Aprimorada
 - Eficiência Operacional
 - Inovação Acelerada

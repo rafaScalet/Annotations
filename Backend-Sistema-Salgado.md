@@ -1,0 +1,17 @@
+- **Linguagem: JavaScript/TypeScript** 
+O BackEnd do sistema será feito usando o [Node.JS](https://nodejs.org/pt), um runtime JavaScript, e para manter a integridade do código, será usado juntamente o superset [TypeScript](https://www.typescriptlang.org/), para adicionar verificação de tipos ao JavaScript. Foi escolhido estas tecnologias por serem mais modernas e por ter diversas bibliotecas que facilitam o desenvolvimento de APIs.
+
+- **Banco de Dados: Postgres**
+Foi escolhido o banco de dados [postgres](https://www.postgresql.org/) por ser um dos mais famosos do mundo, ser um projeto open source e bem mantido, com uma documentação excelente e diversos materiais de terceiros sobre. Para fazer a conexão com o banco, será usado um ORM chamado [prisma](https://www.prisma.io/), que abstrai a conexão e a criação do banco.
+
+- **Plataforma de Hospedagem: Hostgator**
+Por ser uma API simples, que não será aberta ao público, e terá um controle de acessos mais rígido, acreditamos que uma simples VPS resolverá o problema, e decidimos usar a [hostgator](https://www.hostgator.com.br/) por já estar a anos no mercado e ter uma alta credibilidade com seus clientes, soluções como [AWS](https://aws.amazon.com/pt/), [Azure](https://azure.microsoft.com/pt-br) ou [Google Clouds](https://cloud.google.com/?hl=pt-BR), talvez sejam um pouco demais para o escopo do projeto.
+
+- **Arquitetura: Arquitetura em Camadas**
+O uso da arquitetura em camadas em um projeto backend é extremamente comum, então usaremos está arquitetura juntamente do DDD (Domain Driven Development) para modelar o projeto, e como no Node.JS já existem soluções que utilizam está arquitetura por padrão, como o próprio [NestJS](https://nestjs.com/) e o [Adonis](https://adonisjs.com/). O uso do DDD foi pensado para agilizar o desenvolvimento, por ser uma empresa "diferente" será bem mais fácil de manter o projeto se os desenvolvedores entenderem todos os aspectos de domínio da empresa.
+
+- **Outros:**
+	- **Docker:** As tecnologias usadas no projeto, permitem que usemos [docker](https://www.docker.com/) de uma forma bem fácil, como ambas tecnologias listadas como principais (Node.JS e Postgres) tem imagens prontas para serem usadas a "conteinerização" do projeto pode ser feita de forma simples e rápida.
+	- **Documentação:** Usaremos o padrão [swagger/openapi](https://swagger.io/specification/) para fazer a documentação de rotas, modelos entre outras coisas, usaremos também uma interface chamada Scalar, para deixar a documentação mais legível tanto para os desenvolvedores quanto para os clientes.
+	- **Versionamento e CI/CD:** Usaremos o [Git](https://git-scm.com/) como nosso VCS (Version Control System) por ser o mais usado e simples de se utilizar, além de usar o [GitHub](https://github.com/) para armazenar remotamente o código, e usar o recurso do [GitHub Actions](https://github.com/features/actions) para automatizar o CI/CD, foi escolhido usar o GitHub Actions, pois ele já tem integração com a plataforma de hospedagem escolhida, no caso a Hostgator.
+	- **Logs:** Para entender melhor como a API estará lidando com as requisições, usaremos o [Prometheus](https://prometheus.io/) para gerar os logs de forma detalhada e o [Grafana](https://grafana.com/), para podermos ler estes logs de forma fácil.

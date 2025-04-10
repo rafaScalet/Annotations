@@ -1,4 +1,3 @@
-
 # O que é
 
 é um padrão de projeto do grupo dos comportamentais, Memento do latim significa algo como lembre-se, ou recordar, o que é basicamente p que este padrão faz, que é salvar em um histórico, ou lembrar-se, do estado anterior de um objeto, mas sem revelar em detalhes sua implementação.
@@ -7,15 +6,15 @@
 
 O que eu mais encontrei pesquisando, foi o exemplo de um editor de textos moderno, pois todos os usuários, esperam poder "dar ctrl + z" para poder desfazer qualquer tipo de alteração antes feita, poderíamos simplesmente armazenar todos os estados dos elementos em tela antes de realizar alguma alteração, e depois usar este esteado antigo caso o usuário queira, mas esta abordagem não se torna tão simples ao trabalhar com POO, pelo fato de que os objetos muitas vezes tem diversos atributos e muitos deles são privados, ou seja, outras classes não podem acessar.
 
-![Exemplo Problema](problema-exemplo-memento.png)
+![Memento-Refactor-Guru-Problema](https://refactoring.guru/images/patterns/diagrams/memento/problem1-pt-br.png)
 
 Uma solução seria evitar o uso de atributos privados, mas isso vai contra o principio de encapsulamento, um dos quatro pilares da POO, além que, ao resolver desta forma, um classe estaria literalmente copiando outra, fazendo ter muito repetição de código, e tornando uma futura refatoração muito complexa.
 
 ## Solução
 
-O padrão `Memen0to` implementa uma forma mais "POO" de fazer as coisas, onde, ao invés de tentarmos armazenar o estado da classe original (no exemplo, um editor de texto) em outra classe talvez nomeada de histórico, armazenar estas informações dentro de um objeto especial chamado memento dentro da própria classe que necessita de um histórico, pois desta forma, ela teria acesso total a seus estados, inclusive, desta forma, o próprio "histórico" poderia estar encapsulado dentro da classe que irá usa-lo, assim limitando o acesso destas informações por outras classes.
+O padrão `Memento` implementa uma forma mais "POO" de fazer as coisas, onde, ao invés de tentarmos armazenar o estado da classe original (no exemplo, um editor de texto) em outra classe talvez nomeada de histórico, armazenar estas informações dentro de um objeto especial chamado memento dentro da própria classe que necessita de um histórico, pois desta forma, ela teria acesso total a seus estados, inclusive, desta forma, o próprio "histórico" poderia estar encapsulado dentro da classe que irá usa-lo, assim limitando o acesso destas informações por outras classes.
 
-![Exemplo Solução](solucao-exemplo-memento.png)
+![Memento-Refactor-Guru-Solucao](https://refactoring.guru/images/patterns/diagrams/memento/solution-pt-br.png)
 
 # Código
 

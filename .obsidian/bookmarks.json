@@ -1,0 +1,17 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1744050956902,
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1744050996259,
+          "path": "Prototype.md",
+          "title": "Prototype"
+        }
+      ],
+      "title": "Padrões de Projeto Criacionais"
+    }
+  ]
+}

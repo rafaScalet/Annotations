@@ -1,1 +1,0 @@
-Não é possível generalizar os resultados para a população, pois amostra não probabilísticas não garante a representatividade da população
